@@ -17,6 +17,8 @@ I am third-year Ph.D. candidate at Singapore Management University. I am current
 
 ## News
 
+- **[Apr. 2025]** Our papaer "Revisiting LLM Evaluation through Mechanism Interpretability: A New Metric and Model Utility Law" is published.
+- **[Jan. 2025]** One paper is accepted to NAACL Findings.
 - **[Oct. 2024]** One paper is accepted to NeurIPS 2024 Dataset & Benchmark Track.
 - **[Oct. 2024]** Two papers are accepted to EMNLP 2024 Findings.
 - **[Jun. 2024]** Two papers are accepted to ACL 2024 (One Main conference and one Findings).

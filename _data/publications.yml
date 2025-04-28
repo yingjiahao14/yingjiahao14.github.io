@@ -1,8 +1,19 @@
 main:
 
+  - title: "Revisiting LLM Evaluation through Mechanism Interpretability: a New Metric and Model Utility Law"
+    authors: Yixin Cao, <strong>Jiahao Yin</strong>,  Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
+    conference_short: 
+    conference: 
+    pdf: https://arxiv.org/pdf/2504.07440
+    code: https://github.com/ALEX-nlp/MUI-Eval
+    page: https://github.com/ALEX-nlp/MUI-Eval
+    bibtex: https://arxiv.org/pdf/2504.07440
+    notes: 
+    image: ./assets/img/Utility_Law.png
+
   - title: "Automating Dataset Updates Towards Reliable and Timely Evaluation of Large Language Models"
     authors: <strong>Jiahao Yin</strong>, Yixin Cao, Yushi Bai, Qianru Sun, Bo Wang, Wei Tang, Zhaojun Ding, Yizhe Yang, Xuanjing Huang, Shuicheng Yan
-    conference_short: EMNLP
+    conference_short: NeurIPS
     conference: Advances in Neural Information Processing Systems 37 <strong>NeurIPS</strong>, 2024
     pdf: https://arxiv.org/abs/2402.11894
     code: https://github.com/yingjiahao14/Automating-DatasetUpdates
