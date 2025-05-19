@@ -10,6 +10,17 @@ main:
     bibtex: https://arxiv.org/pdf/2504.07440
     notes: 
     image: ./assets/img/Utility_Law.png
+  
+  - title: "Disentangling Language Medium and Culture Context for Evaluating Multilingual Large Language Models"
+    authors: <strong>Jiahao Ying</strong>, Wei Tang, Yiran Zhao, Yixin Cao, Yu Rong, Wenxuan Zhang
+    conference_short: ACL
+    conference: Association for Computational Linguistics <strong>ACL</strong>, 2025.
+    pdf: 
+    code: https://github.com/yingjiahao14/Dual-Eval
+    page: https://yingjiahao14.github.io/Dual-Evaluation/
+    bibtex: 
+    notes: Main
+    image: ./assets/img/interpretation.png
 
   - title: "Automating Dataset Updates Towards Reliable and Timely Evaluation of Large Language Models"
     authors: <strong>Jiahao Yin</strong>, Yixin Cao, Yushi Bai, Qianru Sun, Bo Wang, Wei Tang, Zhaojun Ding, Yizhe Yang, Xuanjing Huang, Shuicheng Yan
