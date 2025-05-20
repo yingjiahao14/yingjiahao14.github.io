@@ -1,7 +1,7 @@
 main:
 
   - title: "Revisiting LLM Evaluation through Mechanism Interpretability: a New Metric and Model Utility Law"
-    authors: Yixin Cao, <strong>Jiahao Yin</strong>,  Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
+    authors: Yixin Cao, <strong>Jiahao Ying</strong>,  Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
     conference_short: 
     conference: 
     pdf: https://arxiv.org/pdf/2504.07440
@@ -34,7 +34,7 @@ main:
     image: ./assets/img/autoupdate.png
    
   - title: "LLMs-as-Instructors: Learning from Errors Toward Automating Model Improvement"
-    authors: <strong>Jiahao Yin</strong>, Mingbao Lin, Yixin Cao, Wei Tang, Bo Wang, Qianru Sun, Xuanjing Huang, Shuicheng Yan
+    authors: <strong>Jiahao Ying</strong>, Mingbao Lin, Yixin Cao, Wei Tang, Bo Wang, Qianru Sun, Xuanjing Huang, Shuicheng Yan
     conference_short: EMNLP
     conference: Empirical Methods in Natural Language Processing  <strong>EMNLP</strong>, 2024.
     pdf: https://arxiv.org/abs/2407.00497
@@ -45,7 +45,7 @@ main:
     image: ./assets/img/LEC.png
   
   - title: Intuitive or Dependent? Investigating LLMs’ Behavior Style to Conflicting Prompts
-    authors: <strong>Jiahao Yin</strong>, Yixin Cao, Kai Xiong, Yidong He, Long Cui, Yongbin Liu
+    authors: <strong>Jiahao Ying</strong>, Yixin Cao, Kai Xiong, Yidong He, Long Cui, Yongbin Liu
     conference_short: ACL
     conference: Association for Computational Linguistics <strong>ACL</strong>, 2024.
     pdf: https://aclanthology.org/2024.acl-long.232/
