@@ -17,6 +17,7 @@ I am third-year Ph.D. candidate at Singapore Management University. I am current
 
 ## News
 
+- **[Feb. 2026]** Two papers were accepted to ICLR 2026, "FRAbench and GenEval" is selected for oral presentations.
 - **[May. 2025]** Two papers are accepted to ACL 2025 Main Conference.
 - **[Apr. 2025]** Our papaer "Revisiting LLM Evaluation through Mechanism Interpretability: A New Metric and Model Utility Law" is published.
 - **[Jan. 2025]** One paper is accepted to NAACL Findings.
