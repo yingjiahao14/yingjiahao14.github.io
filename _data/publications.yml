@@ -10,6 +10,7 @@ main:
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
     badge: Preprint
     scene: skill
+    story: 'An auditor sweeps the open-skill shelf — most pass, one gets flagged.'
     pdf: https://arxiv.org/abs/2605.23657
     code: https://github.com/ALEX-nlp/OpenSkillEval
     page: https://yingjiahao14.github.io/OpenSkillEval-Web/
@@ -19,6 +20,7 @@ main:
     authors: Shibo Hong, <strong>Jiahao Ying</strong>, Haiyuan Liang, Mengdi Zhang, Jun Kuang, Jiazheng Zhang, Yixin Cao
     badge: ICLR 2026 · Oral
     scene: ufeval
+    story: 'One answer, scored along many fine-grained aspects at once.'
     pdf: https://openreview.net/forum?id=7WdY3Cojy9
     code: https://github.com/ALEX-nlp/UFEval
     page: https://iclr.cc/virtual/2026/oral/10011292
@@ -28,6 +30,7 @@ main:
     authors: Yixin Cao, <strong>Jiahao Ying</strong>, Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
     badge: Preprint
     scene: mui
+    story: 'Great score — but peek inside, and only a few neurons are doing the work.'
     pdf: https://arxiv.org/pdf/2504.07440
     code: https://github.com/ALEX-nlp/MUI-Eval
     image: ./assets/img/Utility_Law.png
@@ -36,6 +39,7 @@ main:
     authors: <strong>Jiahao Ying</strong>, Wei Tang, Yiran Zhao, Yixin Cao, Yu Rong, Wenxuan Zhang
     badge: ACL 2025 · Main
     scene: dual
+    story: 'One question, untangled into two axes — language and culture — then graded cell by cell.'
     pdf: https://aclanthology.org/2025.acl-long.1082/
     code: https://github.com/yingjiahao14/Dual-Eval
     page: https://yingjiahao14.github.io/Dual-Evaluation/
@@ -45,6 +49,7 @@ main:
     authors: <strong>Jiahao Ying</strong>, Yixin Cao, Yushi Bai, Qianru Sun, Bo Wang, Wei Tang, Zhaojun Ding, Yizhe Yang, Xuanjing Huang, Shuicheng Yan
     badge: NeurIPS 2024 · Poster
     scene: update
+    story: 'Benchmarks go stale; this one refreshes itself to v2, automatically.'
     pdf: https://arxiv.org/abs/2402.11894
     code: https://github.com/yingjiahao14/Automating-DatasetUpdates
     page: https://yingjiahao14.github.io/Automating-DatasetUpdates/
@@ -54,6 +59,7 @@ main:
     authors: <strong>Jiahao Ying</strong>, Mingbao Lin, Yixin Cao, Wei Tang, Bo Wang, Qianru Sun, Xuanjing Huang, Shuicheng Yan
     badge: EMNLP 2024 · Findings
     scene: instructor
+    story: 'Mistakes loop back as lessons — until the ✗ turns into a ✓.'
     pdf: https://arxiv.org/abs/2407.00497
     code: https://github.com/SkyworkAI/LLMs-as-Instructors
     page: https://yingjiahao14.github.io/LLMs-as-Instructors-pages/
@@ -63,6 +69,7 @@ main:
     authors: <strong>Jiahao Ying</strong>, Yixin Cao, Kai Xiong, Yidong He, Long Cui, Yongbin Liu
     badge: ACL 2024 · Main
     scene: conflict
+    story: 'Trust its own memory, or follow the prompt? A tug-of-war in slow motion.'
     pdf: https://aclanthology.org/2024.acl-long.232/
     code: https://github.com/yingjiahao14/KRE
     image: ./assets/img/intuitive.png
@@ -71,6 +78,7 @@ main:
     authors: Wei Tang, Yixin Cao, <strong>Jiahao Ying</strong>, Bo Wang, Yuyue Zhao, Yong Liao, Pengyuan Zhou
     badge: ACL 2024 · Findings
     scene: ab
+    story: 'A generator writes, a reader reads — together they climb above the solo baseline.'
     pdf: https://aclanthology.org/2024.findings-acl.219/
     image: ./assets/img/a_b.png
 
@@ -78,5 +86,6 @@ main:
     authors: Yushi Bai*, <strong>Jiahao Ying*</strong>, Yixin Cao, Xin Lv, Yuze He, Xiaozhi Wang, Jifan Yu, Kaisheng Zeng, Yijia Xiao, Haozhe Lyu, Jiayin Zhang, Juanzi Li, Lei Hou
     badge: NeurIPS 2023 · Poster
     scene: examiner
+    story: 'A language model sets the exam, grades the answer, and stamps the score.'
     pdf: https://proceedings.neurips.cc/paper_files/paper/2023/file/f64e55d03e2fe61aa4114e49cb654acb-Paper-Datasets_and_Benchmarks.pdf
     image: ./assets/img/benchmarking.png

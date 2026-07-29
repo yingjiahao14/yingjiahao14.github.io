@@ -342,10 +342,23 @@ footer a:hover { color: var(--accent-strong); }
 .pub:hover .ab-pop{animation:ab-pop 4.5s ease-in-out infinite}
 .pub:hover .ab-tag{fill:var(--accent-strong);animation:ab-tag 4.5s ease-in-out infinite}
 
-/* 减少动态效果: 场景整体停用, 保持配图 */
+/* 悬停旁白: 与动画同步展开的一句话解说 */
+.pub .story {
+  font-style: italic; font-size: 0.85rem; line-height: 1.5;
+  color: var(--accent-strong);
+  max-height: 0; opacity: 0; overflow: hidden;
+  margin-top: 0; transform: translateY(4px);
+  transition: max-height .45s cubic-bezier(.22,.61,.36,1),
+              opacity .35s ease .1s, transform .35s ease .1s, margin-top .45s cubic-bezier(.22,.61,.36,1);
+}
+.pub .story::before { content: "✳ "; font-style: normal; color: var(--accent); }
+.pub:hover .story { max-height: 3.4rem; opacity: 1; transform: none; margin-top: 0.5rem; }
+
+/* 减少动态效果: 场景停用保持配图, 旁白常显不再依赖悬停 */
 @media (prefers-reduced-motion: reduce) {
   .pub:hover .thumb img { opacity: 1; }
   .pub:hover .thumb .scene { opacity: 0; }
   .scene, .scene * { animation: none !important; }
+  .pub .story { max-height: none; opacity: 1; transform: none; margin-top: 0.5rem; transition: none; }
 }
 

@@ -21,6 +21,7 @@
         {% if pub.code %}<a class="plink" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
         {% if pub.page %}<a class="plink" href="{{ pub.page }}" target="_blank" rel="noopener">Project</a>{% endif %}
       </div>
+      {% if pub.story %}<div class="story">{{ pub.story }}</div>{% endif %}
     </div>
   </div>
   {% endfor %}
