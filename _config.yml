@@ -1,0 +1,33 @@
+# Basic Information
+title: Jiahao Ying
+position: Ph.D. Candidate
+affiliation: Singapore Management University
+affiliation_link: https://www.smu.edu.sg/
+email: jhying.2022@phdcs.smu.edu.sg
+
+# SEO
+url: https://jhying.org
+description: Jiahao Ying — Ph.D. candidate at Singapore Management University, working on the automated evaluation and improvement of Large Language Models.
+
+# Links
+google_scholar: https://scholar.google.com/citations?user=JOEJg9UAAAAJ&hl=en
+cv_link: assets/files/resume_yingjiahao.pdf
+github_link: https://github.com/yingjiahao14
+
+# Images
+avatar: ./assets/img/avatar_jiahao.jpg
+favicon: ./assets/img/favicon.png
+favicon_dark: ./assets/img/favicon-dark.png
+
+# Analytics
+google_analytics: G-F88MKW6PHD
+umami_src: https://analytics.jhying.org/script.js
+umami_website_id: 405ee38d-8a1e-4736-bd58-6a239b79ff28
+
+# Build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - deploy/
+  - vendor/

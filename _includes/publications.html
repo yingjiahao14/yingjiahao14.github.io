@@ -1,0 +1,24 @@
+<h2 id="publications">Publications</h2>
+<div class="publications">
+  {% for pub in site.data.publications.main %}
+  <div class="pub">
+    {% if pub.image %}
+    <div class="thumb"><img src="{{ pub.image }}" alt=""></div>
+    {% endif %}
+    <div>
+      <div class="title">
+        {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% elsif pub.page %}<a href="{{ pub.page }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}{{ pub.title }}{% endif %}
+      </div>
+      <div class="authors">{{ pub.authors }}</div>
+      <div class="meta">
+        {% if pub.badge %}<span class="badge">{{ pub.badge }}</span>{% endif %}
+        {% if pub.pdf %}<a class="plink" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+        {% if pub.code %}<a class="plink" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+        {% if pub.page %}<a class="plink" href="{{ pub.page }}" target="_blank" rel="noopener">Project</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

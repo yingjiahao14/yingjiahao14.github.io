@@ -1,0 +1,11 @@
+# 主页
+jhying.org {
+	root * /srv/site
+	file_server
+	encode zstd gzip
+}
+
+# Umami 统计后台（仅经 HTTPS 反代，3000 端口不再暴露公网）
+analytics.jhying.org {
+	reverse_proxy umami:3000
+}

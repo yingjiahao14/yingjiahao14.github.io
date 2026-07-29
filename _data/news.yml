@@ -1,0 +1,17 @@
+# 每条新闻一个条目；date 是显示用的短标签，text 支持 HTML
+- date: Feb 2026
+  text: Two papers were accepted to <strong>ICLR 2026</strong>; “FRAbench and GenEval” is selected for an <em>oral</em> presentation.
+- date: May 2025
+  text: Two papers were accepted to <strong>ACL 2025</strong> Main Conference.
+- date: Apr 2025
+  text: Our paper “Revisiting LLM Evaluation through Mechanism Interpretability” is published.
+- date: Jan 2025
+  text: One paper was accepted to <strong>NAACL</strong> Findings.
+- date: Oct 2024
+  text: One paper was accepted to <strong>NeurIPS 2024</strong> Datasets &amp; Benchmarks Track.
+- date: Oct 2024
+  text: Two papers were accepted to <strong>EMNLP 2024</strong> Findings.
+- date: Jun 2024
+  text: Two papers were accepted to <strong>ACL 2024</strong> (one Main Conference, one Findings).
+- date: Oct 2023
+  text: One paper was accepted to <strong>NeurIPS 2023</strong> Datasets &amp; Benchmarks Track.
