@@ -6,21 +6,6 @@
 #   image    缩略图路径 (assets/img/ 下)
 main:
 
-  - title: "FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization"
-    authors: Shibo Hong, <strong>Jiahao Ying</strong>, Haiyuan Liang, Mengdi Zhang, Jun Kuang, Jiazheng Zhang, Yixin Cao
-    badge: ICLR 2026 · Oral
-    pdf: https://openreview.net/forum?id=7WdY3Cojy9
-    code: https://github.com/ALEX-nlp/UFEval
-    page: https://iclr.cc/virtual/2026/oral/10011292
-    image: ./assets/img/ufeval.png
-
-  - title: "Diagnosing and Remedying Knowledge Deficiencies in LLMs via Label-free Curricular Meaningful Learning"
-    authors: Kai Xiong, Xiao Ding, Yixin Cao, Li Du, <strong>Jiahao Ying</strong>, Yang Zhao, Bing Qin, Ting Liu
-    badge: ICLR 2026 · Poster
-    pdf: https://arxiv.org/abs/2408.11431
-    page: https://openreview.net/forum?id=qVadFFSfrI
-    image: ./assets/img/lamer.png
-
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
     badge: Preprint
@@ -28,6 +13,14 @@ main:
     code: https://github.com/ALEX-nlp/OpenSkillEval
     page: https://yingjiahao14.github.io/OpenSkillEval-Web/
     image: ./assets/img/openskilleval.png
+
+  - title: "FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization"
+    authors: Shibo Hong, <strong>Jiahao Ying</strong>, Haiyuan Liang, Mengdi Zhang, Jun Kuang, Jiazheng Zhang, Yixin Cao
+    badge: ICLR 2026 · Oral
+    pdf: https://openreview.net/forum?id=7WdY3Cojy9
+    code: https://github.com/ALEX-nlp/UFEval
+    page: https://iclr.cc/virtual/2026/oral/10011292
+    image: ./assets/img/ufeval.png
 
   - title: "Revisiting LLM Evaluation through Mechanism Interpretability: a New Metric and Model Utility Law"
     authors: Yixin Cao, <strong>Jiahao Ying</strong>, Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
