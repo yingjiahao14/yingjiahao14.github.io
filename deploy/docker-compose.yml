@@ -6,9 +6,13 @@ services:
       - "80:80"
       - "443:443"
       - "443:443/udp"
+    environment:
+      STATS_HASH: ${STATS_HASH}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - /var/www/site:/srv/site:ro
+      - ./logs:/var/log/caddy
+      - ./stats:/srv/stats:ro
       - caddy_data:/data
       - caddy_config:/config
 

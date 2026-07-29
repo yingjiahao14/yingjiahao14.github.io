@@ -1,8 +1,30 @@
 # 主页
 jhying.org {
-	root * /srv/site
-	file_server
 	encode zstd gzip
+
+	# 服务器端访问日志 (JSON, 自动轮转, 保留30天)
+	log {
+		output file /var/log/caddy/jhying.org-access.log {
+			roll_size 50mb
+			roll_keep 5
+			roll_keep_for 720h
+		}
+		format json
+	}
+
+	# 服务器日志分析报告 (GoAccess 生成, basic auth 保护)
+	handle_path /serverstats* {
+		basic_auth {
+			jiahao {$STATS_HASH}
+		}
+		root * /srv/stats
+		file_server
+	}
+
+	handle {
+		root * /srv/site
+		file_server
+	}
 }
 
 # Umami 统计后台（仅经 HTTPS 反代，3000 端口不再暴露公网）
