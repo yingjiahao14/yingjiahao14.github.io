@@ -2,8 +2,11 @@
 <div class="publications">
   {% for pub in site.data.publications.main %}
   <div class="pub">
-    {% if pub.image %}
-    <div class="thumb"><img src="{{ pub.image }}" alt="" loading="lazy" decoding="async"></div>
+    {% if pub.image or pub.scene %}
+    <div class="thumb">
+      {% if pub.image %}<img src="{{ pub.image }}" alt="" loading="lazy" decoding="async">{% endif %}
+      {% if pub.scene %}{% include scenes.html scene=pub.scene %}{% endif %}
+    </div>
     {% endif %}
     <div>
       <div class="title">

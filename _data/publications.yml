@@ -9,6 +9,7 @@ main:
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
     badge: Preprint
+    scene: skill
     pdf: https://arxiv.org/abs/2605.23657
     code: https://github.com/ALEX-nlp/OpenSkillEval
     page: https://yingjiahao14.github.io/OpenSkillEval-Web/
@@ -17,6 +18,7 @@ main:
   - title: "FRABench and UFEval: Unified Fine-grained Evaluation with Task and Aspect Generalization"
     authors: Shibo Hong, <strong>Jiahao Ying</strong>, Haiyuan Liang, Mengdi Zhang, Jun Kuang, Jiazheng Zhang, Yixin Cao
     badge: ICLR 2026 · Oral
+    scene: ufeval
     pdf: https://openreview.net/forum?id=7WdY3Cojy9
     code: https://github.com/ALEX-nlp/UFEval
     page: https://iclr.cc/virtual/2026/oral/10011292
@@ -25,6 +27,7 @@ main:
   - title: "Revisiting LLM Evaluation through Mechanism Interpretability: a New Metric and Model Utility Law"
     authors: Yixin Cao, <strong>Jiahao Ying</strong>, Yaoning Wang, Xipeng Qiu, Xuanjing Huang, Yugang Jiang
     badge: Preprint
+    scene: mui
     pdf: https://arxiv.org/pdf/2504.07440
     code: https://github.com/ALEX-nlp/MUI-Eval
     image: ./assets/img/Utility_Law.png
@@ -32,6 +35,7 @@ main:
   - title: "Disentangling Language and Culture for Evaluating Multilingual Large Language Models"
     authors: <strong>Jiahao Ying</strong>, Wei Tang, Yiran Zhao, Yixin Cao, Yu Rong, Wenxuan Zhang
     badge: ACL 2025 · Main
+    scene: dual
     pdf: https://aclanthology.org/2025.acl-long.1082/
     code: https://github.com/yingjiahao14/Dual-Eval
     page: https://yingjiahao14.github.io/Dual-Evaluation/
@@ -40,6 +44,7 @@ main:
   - title: "Automating Dataset Updates Towards Reliable and Timely Evaluation of Large Language Models"
     authors: <strong>Jiahao Ying</strong>, Yixin Cao, Yushi Bai, Qianru Sun, Bo Wang, Wei Tang, Zhaojun Ding, Yizhe Yang, Xuanjing Huang, Shuicheng Yan
     badge: NeurIPS 2024 · Poster
+    scene: update
     pdf: https://arxiv.org/abs/2402.11894
     code: https://github.com/yingjiahao14/Automating-DatasetUpdates
     page: https://yingjiahao14.github.io/Automating-DatasetUpdates/
@@ -48,6 +53,7 @@ main:
   - title: "LLMs-as-Instructors: Learning from Errors Toward Automating Model Improvement"
     authors: <strong>Jiahao Ying</strong>, Mingbao Lin, Yixin Cao, Wei Tang, Bo Wang, Qianru Sun, Xuanjing Huang, Shuicheng Yan
     badge: EMNLP 2024 · Findings
+    scene: instructor
     pdf: https://arxiv.org/abs/2407.00497
     code: https://github.com/SkyworkAI/LLMs-as-Instructors
     page: https://yingjiahao14.github.io/LLMs-as-Instructors-pages/
@@ -56,6 +62,7 @@ main:
   - title: "Intuitive or Dependent? Investigating LLMs' Behavior Style to Conflicting Prompts"
     authors: <strong>Jiahao Ying</strong>, Yixin Cao, Kai Xiong, Yidong He, Long Cui, Yongbin Liu
     badge: ACL 2024 · Main
+    scene: conflict
     pdf: https://aclanthology.org/2024.acl-long.232/
     code: https://github.com/yingjiahao14/KRE
     image: ./assets/img/intuitive.png
@@ -63,11 +70,13 @@ main:
   - title: "A + B: A General Generator-Reader Framework for Optimizing LLMs to Unleash Synergy Potential"
     authors: Wei Tang, Yixin Cao, <strong>Jiahao Ying</strong>, Bo Wang, Yuyue Zhao, Yong Liao, Pengyuan Zhou
     badge: ACL 2024 · Findings
+    scene: ab
     pdf: https://aclanthology.org/2024.findings-acl.219/
     image: ./assets/img/a_b.png
 
   - title: "Benchmarking Foundation Models with Language-Model-as-an-Examiner"
     authors: Yushi Bai*, <strong>Jiahao Ying*</strong>, Yixin Cao, Xin Lv, Yuze He, Xiaozhi Wang, Jifan Yu, Kaisheng Zeng, Yijia Xiao, Haozhe Lyu, Jiayin Zhang, Juanzi Li, Lei Hou
     badge: NeurIPS 2023 · Poster
+    scene: examiner
     pdf: https://proceedings.neurips.cc/paper_files/paper/2023/file/f64e55d03e2fe61aa4114e49cb654acb-Paper-Datasets_and_Benchmarks.pdf
     image: ./assets/img/benchmarking.png
