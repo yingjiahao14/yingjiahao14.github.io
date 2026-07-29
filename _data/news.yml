@@ -1,6 +1,8 @@
 # 每条新闻一个条目；date 是显示用的短标签，text 支持 HTML
+- date: May 2026
+  text: 'New preprint “<a href="https://arxiv.org/abs/2605.23657">OpenSkillEval</a>: Automatically Auditing the Open Skill Ecosystem for LLM Agents” is out.'
 - date: Feb 2026
-  text: Two papers were accepted to <strong>ICLR 2026</strong>; “FRAbench and GenEval” is selected for an <em>oral</em> presentation.
+  text: 'Two papers were accepted to <strong>ICLR 2026</strong>; “<a href="https://openreview.net/forum?id=7WdY3Cojy9">FRABench and UFEval</a>” is selected for an <em>oral</em> presentation.'
 - date: May 2025
   text: Two papers were accepted to <strong>ACL 2025</strong> Main Conference.
 - date: Apr 2025
