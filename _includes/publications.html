@@ -3,7 +3,7 @@
   {% for pub in site.data.publications.main %}
   <div class="pub">
     {% if pub.image %}
-    <div class="thumb"><img src="{{ pub.image }}" alt=""></div>
+    <div class="thumb"><img src="{{ pub.image }}" alt="" loading="lazy" decoding="async"></div>
     {% endif %}
     <div>
       <div class="title">
