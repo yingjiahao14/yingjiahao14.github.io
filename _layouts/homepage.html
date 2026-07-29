@@ -20,6 +20,7 @@
       var saved = localStorage.getItem("theme");
       var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.classList.add("js");
     })();
   </script>
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
@@ -63,12 +64,47 @@
   </div>
 
   <script>
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
     function toggleTheme() {
-      var cur = document.documentElement.getAttribute("data-theme");
-      var next = cur === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      var apply = function () {
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      };
+      if (!document.startViewTransition || reduceMotion.matches) { apply(); return; }
+      var b = document.querySelector(".theme-toggle").getBoundingClientRect();
+      var x = b.left + b.width / 2, y = b.top + b.height / 2;
+      var r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+      document.startViewTransition(apply).ready.then(function () {
+        document.documentElement.animate(
+          { clipPath: ["circle(0px at " + x + "px " + y + "px)", "circle(" + r + "px at " + x + "px " + y + "px)"] },
+          { duration: 480, easing: "ease-in-out", pseudoElement: "::view-transition-new(root)" }
+        );
+      });
     }
+
+    // 滚动渐现
+    (function () {
+      var groups = [".content h2", ".content > p", ".ri-grid", ".news li", ".pub", ".services-list"];
+      var nodes = [];
+      groups.forEach(function (sel) {
+        var list = document.querySelectorAll(sel);
+        for (var i = 0; i < list.length; i++) {
+          list[i].classList.add("reveal");
+          list[i].style.transitionDelay = Math.min(i, 6) * 45 + "ms";
+          nodes.push(list[i]);
+        }
+      });
+      var show = function (el) { el.classList.add("in"); };
+      if (!("IntersectionObserver" in window) || reduceMotion.matches) { nodes.forEach(show); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+      nodes.forEach(function (el) { io.observe(el); });
+    })();
   </script>
 
   {% if site.google_analytics %}
