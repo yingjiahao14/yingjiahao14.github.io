@@ -2,7 +2,7 @@
 jhying.org {
 	encode zstd gzip
 
-	# 服务器端访问日志 (JSON, 自动轮转, 保留30天)
+	# 服务器端访问日志 (黑匣子, 自动轮转保留30天)
 	log {
 		output file /var/log/caddy/jhying.org-access.log {
 			roll_size 50mb
@@ -12,22 +12,11 @@ jhying.org {
 		format json
 	}
 
-	# 服务器日志分析报告 (GoAccess 生成, basic auth 保护)
-	handle_path /serverstats* {
-		basic_auth {
-			jiahao {$STATS_HASH}
-		}
-		root * /srv/stats
-		file_server
-	}
-
-	handle {
-		root * /srv/site
-		file_server
-	}
+	root * /srv/site
+	file_server
 }
 
-# Umami 统计后台（仅经 HTTPS 反代，3000 端口不再暴露公网）
+# Matomo 统计后台
 analytics.jhying.org {
-	reverse_proxy umami:3000
+	reverse_proxy matomo:80
 }

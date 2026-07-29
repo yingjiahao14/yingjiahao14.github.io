@@ -21,8 +21,8 @@ favicon_dark: ./assets/img/favicon-dark.png
 
 # Analytics
 google_analytics: G-F88MKW6PHD
-umami_src: https://analytics.jhying.org/script.js
-umami_website_id: 405ee38d-8a1e-4736-bd58-6a239b79ff28
+matomo_url: //analytics.jhying.org/
+matomo_site_id: 1
 
 # Build
 exclude:

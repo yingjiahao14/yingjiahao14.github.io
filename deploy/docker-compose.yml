@@ -6,43 +6,48 @@ services:
       - "80:80"
       - "443:443"
       - "443:443/udp"
-    environment:
-      STATS_HASH: ${STATS_HASH}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - /var/www/site:/srv/site:ro
       - ./logs:/var/log/caddy
-      - ./stats:/srv/stats:ro
       - caddy_data:/data
       - caddy_config:/config
 
-  umami:
-    image: ghcr.io/umami-software/umami:postgresql-latest
+  matomo:
+    image: matomo:5
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@db:5432/umami
-      DATABASE_TYPE: postgresql
-      APP_SECRET: ${APP_SECRET}
+      MATOMO_DATABASE_HOST: matomo_db
+      MATOMO_DATABASE_ADAPTER: mysqli
+      MATOMO_DATABASE_DBNAME: matomo
+      MATOMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_PASSWORD: ${MATOMO_DB_PASSWORD}
+    volumes:
+      - matomo_data:/var/www/html
     depends_on:
-      db:
+      matomo_db:
         condition: service_healthy
 
-  db:
-    image: postgres:16-alpine
+  matomo_db:
+    image: mariadb:11
     restart: unless-stopped
+    # 小内存机器: 压低 innodb 缓冲池
+    command: --max-allowed-packet=64MB --innodb-buffer-pool-size=128M
     environment:
-      POSTGRES_USER: umami
-      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD}
-      POSTGRES_DB: umami
+      MARIADB_DATABASE: matomo
+      MARIADB_USER: matomo
+      MARIADB_PASSWORD: ${MATOMO_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MATOMO_DB_ROOT_PASSWORD}
     volumes:
-      - umami_db:/var/lib/postgresql/data
+      - matomo_db:/var/lib/mysql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U umami"]
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
       timeout: 5s
-      retries: 10
+      retries: 30
 
 volumes:
   caddy_data:
   caddy_config:
-  umami_db:
+  matomo_data:
+  matomo_db:
