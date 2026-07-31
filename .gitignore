@@ -1,3 +1,6 @@
+# 私有运维手册（含服务器细节，永不提交）
+*.local.md
+
 _site/
 .jekyll-cache/
 .sass-cache/

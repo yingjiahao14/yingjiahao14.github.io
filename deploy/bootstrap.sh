@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 服务器初始化脚本：装 Docker、建目录、生成密钥、拉起 Caddy + Umami。
+# 服务器初始化脚本：装 Docker、建目录、生成密钥、拉起 Caddy + Matomo。
 # 幂等设计，重复执行安全。用法（在服务器上）：
 #   bash /opt/webstack/bootstrap.sh
 set -euo pipefail
@@ -33,8 +33,8 @@ echo "==> [4/6] 生成 .env 密钥（如已存在则不覆盖，避免丢失数�
 cd "$STACK_DIR"
 if [ ! -f .env ]; then
   {
-    echo "APP_SECRET=$(openssl rand -hex 32)"
-    echo "UMAMI_DB_PASSWORD=$(openssl rand -hex 16)"
+    echo "MATOMO_DB_PASSWORD=$(openssl rand -hex 16)"
+    echo "MATOMO_DB_ROOT_PASSWORD=$(openssl rand -hex 16)"
   } > .env
   chmod 600 .env
 fi
@@ -47,4 +47,9 @@ sleep 8
 sudo docker compose ps
 echo
 echo "静态站:  https://jhying.org/"
-echo "Umami:   https://analytics.jhying.org  (经 Caddy 反代, 3000 端口不对公网开放)"
+echo "Matomo:  https://analytics.jhying.org  (经 Caddy 反代)"
+echo
+echo "首次部署提醒: 打开 Matomo 走安装向导时"
+echo "  1) 不要勾选「隐藏访客 IP 最后一段」(否则拿不到完整 IP)"
+echo "  2) 装完在 config.ini.php 的 [General] 段加 proxy_client_headers[]=\"HTTP_X_FORWARDED_FOR\""
+echo "     否则所有访客 IP 会显示成 172.x 内网地址"
