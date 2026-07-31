@@ -157,7 +157,7 @@ h1.name { font-size: 2.45rem; font-weight: 600; letter-spacing: -0.015em; margin
   transition: background .25s ease;
 }
 .pub:last-child { border-bottom: none; }
-.pub:hover { background: var(--surface); }
+.pub:is(:hover,.play) { background: var(--surface); }
 .pub .thumb {
   flex: 0 0 112px; width: 112px; height: 80px;
   border-radius: 10px; border: 1px solid var(--border);
@@ -168,7 +168,7 @@ h1.name { font-size: 2.45rem; font-weight: 600; letter-spacing: -0.015em; margin
   max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
   transition: transform .35s cubic-bezier(.22,.61,.36,1);
 }
-.pub:hover .thumb img { transform: scale(1.06); }
+.pub:is(:hover,.play) .thumb img { transform: scale(1.06); }
 .pub .title { font-size: 1.03rem; font-weight: 600; line-height: 1.45; }
 .pub .title a { color: var(--text); }
 .pub .title a:hover { color: var(--accent-strong); border-bottom-color: var(--accent-strong); }
@@ -181,7 +181,11 @@ h1.name { font-size: 2.45rem; font-weight: 600; letter-spacing: -0.015em; margin
 }
 .plink { font-family: Inter, sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--muted); border-bottom: 1px solid var(--border); }
 .plink:hover { color: var(--accent-strong); border-bottom-color: var(--accent-strong); }
-@media (max-width: 560px) { .pub .thumb { display: none; } }
+/* 窄屏: 图文改为上下堆叠, 缩略图放大居中当小舞台 (动画由 JS 在滑入屏幕中带时触发) */
+@media (max-width: 560px) {
+  .pub { flex-direction: column; gap: 0.8rem; }
+  .pub .thumb { flex: none; width: min(240px, 100%); height: auto; aspect-ratio: 132 / 94; align-self: center; }
+}
 
 /* services */
 .services-list h3 { font-size: 1rem; font-weight: 600; margin: 0 0 0.5rem; }
@@ -204,7 +208,7 @@ footer a:hover { color: var(--accent-strong); }
   .js .content h2::after, .js .content h2.in::after { transform: scaleX(1); transition: none; }
   .news li:first-child::after { animation: none; opacity: 0; }
   .avatar, .pill, .ri-card, .pub .thumb img, .theme-toggle, .content h2::before { transition: none; }
-  .avatar:hover, .pill:hover, .ri-card:hover, .pub:hover .thumb img, .theme-toggle:hover, .content h2:hover::before { transform: none; }
+  .avatar:hover, .pill:hover, .ri-card:hover, .pub:is(:hover,.play) .thumb img, .theme-toggle:hover, .content h2:hover::before { transform: none; }
 }
 
 
@@ -216,8 +220,8 @@ footer a:hover { color: var(--accent-strong); }
   opacity: 0; background: var(--bg); color: var(--text);
   transition: opacity .35s ease; pointer-events: none;
 }
-.pub:hover .thumb img { opacity: 0; }
-.pub:hover .thumb .scene { opacity: 1; }
+.pub:is(:hover,.play) .thumb img { opacity: 0; }
+.pub:is(:hover,.play) .thumb .scene { opacity: 1; }
 
 /* 场景绘图零件 */
 .scene .ln { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
@@ -294,63 +298,63 @@ footer a:hover { color: var(--accent-strong); }
 @keyframes ab-tag{0%,76%{opacity:0}82%,94%{opacity:1}100%{opacity:0}}
 
 /* 悬停触发的场景动画 */
-.pub:hover .bot{animation:float 3.2s ease-in-out infinite}
-.pub:hover .bot .eye{animation:blink 4.4s infinite;transform-origin:center;transform-box:fill-box}
-.pub:hover .b2 .bot{animation-delay:-1.6s}
-.pub:hover .s-examiner .qbub{animation:travelR 4.6s ease-in-out infinite}
-.pub:hover .s-examiner .abub{animation:travelL 4.6s ease-in-out infinite}
-.pub:hover .s-examiner .dots{animation:think 4.6s infinite}
-.pub:hover .s-examiner .score{animation:stamp 4.6s ease-out infinite}
-.pub:hover .s-skill .glass{animation:sweep 5s ease-in-out infinite}
-.pub:hover .s-skill .m1{animation:popIn 5s infinite}
-.pub:hover .s-skill .m2{animation:popIn 5s infinite;animation-delay:.9s}
-.pub:hover .s-skill .m3{animation:popIn 5s infinite;animation-delay:1.8s}
-.pub:hover .ufeval-aim{animation:ufeval-aim 4.5s ease-in-out infinite}
-.pub:hover .ufeval-b1{animation:ufeval-b1 4.5s ease-in-out infinite}
-.pub:hover .ufeval-b2{animation:ufeval-b2 4.5s ease-in-out infinite}
-.pub:hover .ufeval-b3{animation:ufeval-b3 4.5s ease-in-out infinite}
-.pub:hover .ufeval-t1{animation:ufeval-t1 4.5s ease-in-out infinite}
-.pub:hover .ufeval-t2{animation:ufeval-t2 4.5s ease-in-out infinite}
-.pub:hover .ufeval-t3{animation:ufeval-t3 4.5s ease-in-out infinite}
-.pub:hover .ufeval-c1{animation:ufeval-c1 4.5s linear infinite}
-.pub:hover .ufeval-c2{animation:ufeval-c2 4.5s linear infinite}
-.pub:hover .ufeval-c3{animation:ufeval-c3 4.5s linear infinite}
-.pub:hover .s-instructor .loop{animation:orbit 4s linear infinite}
-.pub:hover .s-instructor .cross{animation:markOff 4s infinite}
-.pub:hover .s-instructor .tick{animation:markOn 4s infinite}
-.pub:hover .mui-lens{animation:mui-probe 4.6s ease-in-out infinite}
-.pub:hover .mui-n1{animation:mui-p1 4.6s ease-in-out infinite}
-.pub:hover .mui-n2{animation:mui-p2 4.6s ease-in-out infinite}
-.pub:hover .mui-n3{animation:mui-p3 4.6s ease-in-out infinite}
-.pub:hover .mui-b1{animation:mui-bar1 4.6s linear infinite}
-.pub:hover .mui-b2{animation:mui-bar2 4.6s linear infinite}
-.pub:hover .dual-stem{stroke-dasharray:100 110;animation:dual-stem 4.5s linear infinite}
-.pub:hover .dual-fork{stroke-dasharray:100 110;animation:dual-fork 4.5s ease-out infinite}
-.pub:hover .dual-ax{stroke-dasharray:100 110;animation:dual-ax 4.5s linear infinite}
-.pub:hover .dual-seed{animation:dual-seed 4.5s ease-in-out infinite}
-.pub:hover .dual-lab{animation:dual-lab 4.5s ease-in-out infinite}
-.pub:hover .dual-q1{animation:dual-q1 4.5s ease-in-out infinite}
-.pub:hover .dual-q2{animation:dual-q2 4.5s ease-in-out infinite}
-.pub:hover .dual-q3{animation:dual-q3 4.5s ease-in-out infinite}
-.pub:hover .dual-q4{animation:dual-q4 4.5s ease-in-out infinite}
-.pub:hover .dual-m1{animation:dual-m1 4.5s ease-in-out infinite}
-.pub:hover .dual-m2{animation:dual-m2 4.5s ease-in-out infinite}
-.pub:hover .dual-m3{animation:dual-m3 4.5s ease-in-out infinite}
-.pub:hover .dual-m4{animation:dual-m4 4.5s ease-in-out infinite}
-.pub:hover .update-old{animation:update-old 4.6s ease-in-out infinite}
-.pub:hover .update-x{stroke-width:2;animation:update-x 4.6s ease-in-out infinite}
-.pub:hover .update-arc{stroke-dasharray:90;animation:update-arc 4.6s ease-in-out infinite}
-.pub:hover .update-new{animation:update-new 4.6s ease-in-out infinite}
-.pub:hover .update-check{stroke-dasharray:12;animation:update-check 4.6s ease-in-out infinite}
-.pub:hover .conflict-sway{animation:conflict-sway 4.6s ease-in-out infinite}
-.pub:hover .conflict-mem{animation:conflict-mem 4.6s ease-in-out infinite}
-.pub:hover .conflict-pmt{animation:conflict-pmt 4.6s ease-in-out infinite}
-.pub:hover .conflict-pl{animation:conflict-pl 4.6s ease-in-out infinite}
-.pub:hover .conflict-pr{animation:conflict-pr 4.6s ease-in-out infinite}
-.pub:hover .ab-doc{animation:ab-doc 4.5s ease-in-out infinite}
-.pub:hover .ab-draw{stroke-dasharray:90;animation:ab-draw 4.5s linear infinite}
-.pub:hover .ab-pop{animation:ab-pop 4.5s ease-in-out infinite}
-.pub:hover .ab-tag{fill:var(--accent-strong);animation:ab-tag 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .bot{animation:float 3.2s ease-in-out infinite}
+.pub:is(:hover,.play) .bot .eye{animation:blink 4.4s infinite;transform-origin:center;transform-box:fill-box}
+.pub:is(:hover,.play) .b2 .bot{animation-delay:-1.6s}
+.pub:is(:hover,.play) .s-examiner .qbub{animation:travelR 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .s-examiner .abub{animation:travelL 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .s-examiner .dots{animation:think 4.6s infinite}
+.pub:is(:hover,.play) .s-examiner .score{animation:stamp 4.6s ease-out infinite}
+.pub:is(:hover,.play) .s-skill .glass{animation:sweep 5s ease-in-out infinite}
+.pub:is(:hover,.play) .s-skill .m1{animation:popIn 5s infinite}
+.pub:is(:hover,.play) .s-skill .m2{animation:popIn 5s infinite;animation-delay:.9s}
+.pub:is(:hover,.play) .s-skill .m3{animation:popIn 5s infinite;animation-delay:1.8s}
+.pub:is(:hover,.play) .ufeval-aim{animation:ufeval-aim 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-b1{animation:ufeval-b1 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-b2{animation:ufeval-b2 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-b3{animation:ufeval-b3 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-t1{animation:ufeval-t1 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-t2{animation:ufeval-t2 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-t3{animation:ufeval-t3 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ufeval-c1{animation:ufeval-c1 4.5s linear infinite}
+.pub:is(:hover,.play) .ufeval-c2{animation:ufeval-c2 4.5s linear infinite}
+.pub:is(:hover,.play) .ufeval-c3{animation:ufeval-c3 4.5s linear infinite}
+.pub:is(:hover,.play) .s-instructor .loop{animation:orbit 4s linear infinite}
+.pub:is(:hover,.play) .s-instructor .cross{animation:markOff 4s infinite}
+.pub:is(:hover,.play) .s-instructor .tick{animation:markOn 4s infinite}
+.pub:is(:hover,.play) .mui-lens{animation:mui-probe 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .mui-n1{animation:mui-p1 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .mui-n2{animation:mui-p2 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .mui-n3{animation:mui-p3 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .mui-b1{animation:mui-bar1 4.6s linear infinite}
+.pub:is(:hover,.play) .mui-b2{animation:mui-bar2 4.6s linear infinite}
+.pub:is(:hover,.play) .dual-stem{stroke-dasharray:100 110;animation:dual-stem 4.5s linear infinite}
+.pub:is(:hover,.play) .dual-fork{stroke-dasharray:100 110;animation:dual-fork 4.5s ease-out infinite}
+.pub:is(:hover,.play) .dual-ax{stroke-dasharray:100 110;animation:dual-ax 4.5s linear infinite}
+.pub:is(:hover,.play) .dual-seed{animation:dual-seed 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-lab{animation:dual-lab 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-q1{animation:dual-q1 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-q2{animation:dual-q2 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-q3{animation:dual-q3 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-q4{animation:dual-q4 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-m1{animation:dual-m1 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-m2{animation:dual-m2 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-m3{animation:dual-m3 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .dual-m4{animation:dual-m4 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .update-old{animation:update-old 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .update-x{stroke-width:2;animation:update-x 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .update-arc{stroke-dasharray:90;animation:update-arc 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .update-new{animation:update-new 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .update-check{stroke-dasharray:12;animation:update-check 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .conflict-sway{animation:conflict-sway 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .conflict-mem{animation:conflict-mem 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .conflict-pmt{animation:conflict-pmt 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .conflict-pl{animation:conflict-pl 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .conflict-pr{animation:conflict-pr 4.6s ease-in-out infinite}
+.pub:is(:hover,.play) .ab-doc{animation:ab-doc 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ab-draw{stroke-dasharray:90;animation:ab-draw 4.5s linear infinite}
+.pub:is(:hover,.play) .ab-pop{animation:ab-pop 4.5s ease-in-out infinite}
+.pub:is(:hover,.play) .ab-tag{fill:var(--accent-strong);animation:ab-tag 4.5s ease-in-out infinite}
 
 /* 悬停旁白: 与动画同步展开的一句话解说 */
 .pub .story {
@@ -362,12 +366,12 @@ footer a:hover { color: var(--accent-strong); }
               opacity .35s ease .1s, transform .35s ease .1s, margin-top .45s cubic-bezier(.22,.61,.36,1);
 }
 .pub .story::before { content: "✳ "; font-style: normal; color: var(--accent); }
-.pub:hover .story { max-height: 3.4rem; opacity: 1; transform: none; margin-top: 0.5rem; }
+.pub:is(:hover,.play) .story { max-height: 3.4rem; opacity: 1; transform: none; margin-top: 0.5rem; }
 
 /* 减少动态效果: 场景停用保持配图, 旁白常显不再依赖悬停 */
 @media (prefers-reduced-motion: reduce) {
-  .pub:hover .thumb img { opacity: 1; }
-  .pub:hover .thumb .scene { opacity: 0; }
+  .pub:is(:hover,.play) .thumb img { opacity: 1; }
+  .pub:is(:hover,.play) .thumb .scene { opacity: 0; }
   .scene, .scene * { animation: none !important; }
   .pub .story { max-height: none; opacity: 1; transform: none; margin-top: 0.5rem; transition: none; }
 }

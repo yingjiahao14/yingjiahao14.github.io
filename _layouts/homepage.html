@@ -105,6 +105,17 @@
       }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
       nodes.forEach(function (el) { io.observe(el); });
     })();
+
+    // 触屏没有悬停: 论文卡滑进屏幕中带时自动上演动画, 滑走恢复配图
+    (function () {
+      if (!window.matchMedia("(hover: none)").matches || reduceMotion.matches) return;
+      if (!("IntersectionObserver" in window)) return;
+      var stage = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.target.classList.toggle("play", e.isIntersecting); });
+      }, { rootMargin: "-35% 0px -35% 0px" });
+      var pubs = document.querySelectorAll(".pub");
+      for (var i = 0; i < pubs.length; i++) { stage.observe(pubs[i]); }
+    })();
   </script>
 
   {% if site.google_analytics %}

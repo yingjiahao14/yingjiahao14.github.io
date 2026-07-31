@@ -14,8 +14,11 @@ Push to `main` and the site is built and deployed automatically.
 ## Publication hover animations
 
 Each publication row can show a small SVG "scene" that plays on hover (the
-thumbnail fades out, the animation fades in). Moving the mouse away, mobile
-screens, and `prefers-reduced-motion` all fall back to the static thumbnail.
+thumbnail fades out, the animation fades in). On touch screens there is no
+hover, so a small IntersectionObserver in `_layouts/homepage.html` adds a
+`.play` class while the card sits in the middle band of the viewport — scenes
+auto-play as you scroll, and revert to the thumbnail as they leave. Moving the
+mouse away and `prefers-reduced-motion` fall back to the static thumbnail.
 
 A shared character system keeps every scene consistent: one robot "bot" plus a
 kit of parts (speech bubble, document, magnifier, score stamp, skill block),
@@ -38,8 +41,9 @@ Files involved:
 2. In `_includes/scenes.html`, add `{% when 'probing' %}` with an
    `<svg class="scene s-probing" viewBox="0 0 132 94" aria-hidden="true">…</svg>`.
 3. In `assets/css/main.css`, add `@keyframes probing-*` and matching
-   `.pub:hover .probing-*` rules (prefix every class with the key to avoid
-   collisions across scenes).
+   `.pub:is(:hover,.play) .probing-*` rules (the `:is()` makes the scene work
+   for both desktop hover and mobile scroll-play; prefix every class with the
+   key to avoid collisions across scenes).
 4. In `_data/publications.yml`, add `scene: probing` to that paper.
 
 **The one hard rule** (both reviewers on the first build hit this): in SVG, a CSS
