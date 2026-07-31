@@ -86,7 +86,7 @@ h1.name { font-size: 2.45rem; font-weight: 600; letter-spacing: -0.015em; margin
   margin: 3rem 0 1.1rem; padding-top: 2.4rem;
 }
 .content h2::before {
-  content: "✳"; color: var(--accent); margin-right: 0.45rem; font-weight: 400;
+  content: "\2733\FE0E"; color: var(--accent); margin-right: 0.45rem; font-weight: 400; /* FE0E 强制文本渲染, 避免 iOS 画成绿色 emoji */
   display: inline-block; transition: transform .5s cubic-bezier(.22,.61,.36,1);
 }
 .content h2:hover::before { transform: rotate(180deg); }
@@ -365,7 +365,7 @@ footer a:hover { color: var(--accent-strong); }
   transition: max-height .45s cubic-bezier(.22,.61,.36,1),
               opacity .35s ease .1s, transform .35s ease .1s, margin-top .45s cubic-bezier(.22,.61,.36,1);
 }
-.pub .story::before { content: "✳ "; font-style: normal; color: var(--accent); }
+.pub .story::before { content: "\2733\FE0E\20"; font-style: normal; color: var(--accent); }
 .pub:is(:hover,.play) .story { max-height: 3.4rem; opacity: 1; transform: none; margin-top: 0.5rem; }
 
 /* 减少动态效果: 场景停用保持配图, 旁白常显不再依赖悬停 */
