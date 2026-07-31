@@ -227,7 +227,7 @@ footer a:hover { color: var(--accent-strong); }
 .scene .fillbg { fill: var(--bg); }
 .scene .fillsurf { fill: var(--surface); }
 .scene .tiny { font-family: Inter, sans-serif; font-size: 5.5px; fill: var(--muted); }
-.s-ufeval .ray { stroke-dasharray: 34; stroke-dashoffset: 0; }
+.s-ufeval .beam { stroke-dasharray: 100 110; stroke-dashoffset: 100; }
 .s-instructor .loop { stroke-dasharray: 90; }
 
 /* 场景 keyframes */
@@ -239,9 +239,17 @@ footer a:hover { color: var(--accent-strong); }
 @keyframes stamp{0%,84%{opacity:0;transform:scale(2) rotate(-14deg)}91%{opacity:1;transform:scale(.92) rotate(0)}95%{transform:scale(1.06)}100%{opacity:1;transform:scale(1)}}
 @keyframes sweep{0%{transform:translateX(0)}45%{transform:translateX(60px)}55%{transform:translateX(60px)}100%{transform:translateX(0)}}
 @keyframes popIn{0%,18%{opacity:0;transform:scale(.3)}26%{opacity:1;transform:scale(1.25)}32%,100%{opacity:1;transform:scale(1)}}
-@keyframes barGrow{0%,12%{transform:scaleX(0)}55%,100%{transform:scaleX(1)}}
-@keyframes drawRay{0%,8%{stroke-dashoffset:34}45%,100%{stroke-dashoffset:0}}
 @keyframes orbit{0%{stroke-dashoffset:90}100%{stroke-dashoffset:0}}
+@keyframes ufeval-aim{0%,16%{transform:rotate(-13deg)}20%,29%{transform:rotate(0deg)}32%,78%{transform:rotate(13deg)}90%,100%{transform:rotate(-13deg)}}
+@keyframes ufeval-b1{0%,8%{stroke-dashoffset:100;opacity:1}16%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes ufeval-b2{0%,20%{stroke-dashoffset:100;opacity:1}28%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes ufeval-b3{0%,32%{stroke-dashoffset:100;opacity:1}40%,92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes ufeval-t1{0%,15%{opacity:0;transform:scale(.3)}21%{opacity:1;transform:scale(1.25)}26%,92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@keyframes ufeval-t2{0%,27%{opacity:0;transform:scale(.3)}33%{opacity:1;transform:scale(1.25)}38%,92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@keyframes ufeval-t3{0%,39%{opacity:0;transform:scale(.3)}45%{opacity:1;transform:scale(1.25)}50%,92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@keyframes ufeval-c1{0%,14%{stroke:var(--muted)}17%,23%{stroke:var(--accent)}31%,100%{stroke:var(--muted)}}
+@keyframes ufeval-c2{0%,26%{stroke:var(--muted)}29%,35%{stroke:var(--accent)}43%,100%{stroke:var(--muted)}}
+@keyframes ufeval-c3{0%,38%{stroke:var(--muted)}41%,47%{stroke:var(--accent)}55%,100%{stroke:var(--muted)}}
 @keyframes markOff{0%,42%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(.5)}}
 @keyframes markOn{0%,48%{opacity:0;transform:scale(.5)}58%{opacity:1;transform:scale(1.2)}64%,100%{opacity:1;transform:scale(1)}}
 @keyframes mui-probe{
@@ -297,14 +305,16 @@ footer a:hover { color: var(--accent-strong); }
 .pub:hover .s-skill .m1{animation:popIn 5s infinite}
 .pub:hover .s-skill .m2{animation:popIn 5s infinite;animation-delay:.9s}
 .pub:hover .s-skill .m3{animation:popIn 5s infinite;animation-delay:1.8s}
-.pub:hover .s-ufeval .ray{animation:drawRay 4.2s ease-out infinite}
-.pub:hover .s-ufeval .r2{animation-delay:.12s}
-.pub:hover .s-ufeval .r3{animation-delay:.24s}
-.pub:hover .s-ufeval .r4{animation-delay:.36s}
-.pub:hover .s-ufeval .bar{animation:barGrow 4.2s ease-out infinite}
-.pub:hover .s-ufeval .g2 .bar{animation-delay:.12s}
-.pub:hover .s-ufeval .g3 .bar{animation-delay:.24s}
-.pub:hover .s-ufeval .g4 .bar{animation-delay:.36s}
+.pub:hover .ufeval-aim{animation:ufeval-aim 4.5s ease-in-out infinite}
+.pub:hover .ufeval-b1{animation:ufeval-b1 4.5s ease-in-out infinite}
+.pub:hover .ufeval-b2{animation:ufeval-b2 4.5s ease-in-out infinite}
+.pub:hover .ufeval-b3{animation:ufeval-b3 4.5s ease-in-out infinite}
+.pub:hover .ufeval-t1{animation:ufeval-t1 4.5s ease-in-out infinite}
+.pub:hover .ufeval-t2{animation:ufeval-t2 4.5s ease-in-out infinite}
+.pub:hover .ufeval-t3{animation:ufeval-t3 4.5s ease-in-out infinite}
+.pub:hover .ufeval-c1{animation:ufeval-c1 4.5s linear infinite}
+.pub:hover .ufeval-c2{animation:ufeval-c2 4.5s linear infinite}
+.pub:hover .ufeval-c3{animation:ufeval-c3 4.5s linear infinite}
 .pub:hover .s-instructor .loop{animation:orbit 4s linear infinite}
 .pub:hover .s-instructor .cross{animation:markOff 4s infinite}
 .pub:hover .s-instructor .tick{animation:markOn 4s infinite}

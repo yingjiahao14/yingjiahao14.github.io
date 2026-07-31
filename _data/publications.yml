@@ -20,7 +20,7 @@ main:
     authors: Shibo Hong, <strong>Jiahao Ying</strong>, Haiyuan Liang, Mengdi Zhang, Jun Kuang, Jiazheng Zhang, Yixin Cao
     badge: ICLR 2026 · Oral
     scene: ufeval
-    story: 'One answer, scored along many fine-grained aspects at once.'
+    story: 'Text, images, or both interleaved — one judge grades them all, aspect by aspect.'
     pdf: https://openreview.net/forum?id=7WdY3Cojy9
     code: https://github.com/ALEX-nlp/UFEval
     page: https://iclr.cc/virtual/2026/oral/10011292

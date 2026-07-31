@@ -26,27 +26,36 @@
 </svg>
 {% when 'ufeval' %}
 <svg class="scene s-ufeval" viewBox="0 0 132 94" aria-hidden="true">
-      <g transform="translate(8,28)">
-        <path class="ln fillbg" d="M0 0h19l5 5v33H0z"/><path class="ln" d="M19 0v5h5"/>
-        <path class="ln-m" d="M5 13h14M5 19h14M5 25h9"/>
-      </g>
-      <path class="ac-s ray r1" d="M28 34 L58 18"/>
-      <path class="ac-s ray r2" d="M28 42 L58 36"/>
-      <path class="ac-s ray r3" d="M28 50 L58 54"/>
-      <path class="ac-s ray r4" d="M28 56 L58 72"/>
-      <g class="g1" transform="translate(60,14)">
-        <rect class="ln-m fillsurf" x="0" y="0" width="60" height="9" rx="4.5"/><rect class="ac bar" x="1.5" y="1.5" width="48" height="6" rx="3" style="transform-origin:left center;transform-box:fill-box"/>
-      </g>
-      <g class="g2" transform="translate(60,32)">
-        <rect class="ln-m fillsurf" x="0" y="0" width="60" height="9" rx="4.5"/><rect class="ac bar" x="1.5" y="1.5" width="31" height="6" rx="3" style="transform-origin:left center;transform-box:fill-box"/>
-      </g>
-      <g class="g3" transform="translate(60,50)">
-        <rect class="ln-m fillsurf" x="0" y="0" width="60" height="9" rx="4.5"/><rect class="ac bar" x="1.5" y="1.5" width="55" height="6" rx="3" style="transform-origin:left center;transform-box:fill-box"/>
-      </g>
-      <g class="g4" transform="translate(60,68)">
-        <rect class="ln-m fillsurf" x="0" y="0" width="60" height="9" rx="4.5"/><rect class="ac bar" x="1.5" y="1.5" width="22" height="6" rx="3" style="transform-origin:left center;transform-box:fill-box"/>
-      </g>
-    
+<!-- the one unified judge -->
+<g transform="translate(5,30)"><g class="bot">
+  <path class="ln" d="M13 4.5v3"/><circle class="ac" cx="13" cy="3" r="1.6"/>
+  <rect class="ln fillbg" x="3" y="7.5" width="20" height="16" rx="5.5"/>
+  <circle class="eye" cx="9.5" cy="14.5" r="1.4" fill="currentColor"/><circle class="eye" cx="16.5" cy="14.5" r="1.4" fill="currentColor"/>
+  <path class="ln" d="M10 19q3 1.8 6 0"/>
+</g></g>
+<!-- its lens tilts to aim at each item -->
+<g transform="translate(35,41)"><g class="ufeval-aim">
+  <circle class="ac-s" cx="0" cy="0" r="6.5"/><path class="ac-s" d="M4.6 4.6L8.5 8.5"/>
+</g></g>
+<!-- grading beams, fired one by one -->
+<path class="ac-s beam ufeval-b1" pathLength="100" d="M44 38L78 14"/>
+<path class="ac-s beam ufeval-b2" pathLength="100" d="M45 41L78 42"/>
+<path class="ac-s beam ufeval-b3" pathLength="100" d="M44 44L78 70"/>
+<!-- three kinds of content: text / image / interleaved -->
+<rect class="ln-m fillsurf ufeval-c1" x="80" y="4" width="32" height="20" rx="3.5"/>
+<path class="ln-m" d="M85 10h20M85 14.5h20M85 19h12"/>
+<rect class="ln-m fillsurf ufeval-c2" x="80" y="32" width="32" height="20" rx="3.5"/>
+<circle class="ln-m" cx="103" cy="37.5" r="2"/>
+<path class="ln-m" d="M84 48l6-7 4 4.5 2.5-3 3.5 5.5"/>
+<rect class="ln-m fillsurf ufeval-c3" x="80" y="60" width="32" height="20" rx="3.5"/>
+<rect class="ln-m" x="84" y="65" width="10" height="10" rx="1.5"/>
+<path class="ln-m" d="M85.5 73l2.5-3 2 2.2 2.5-2.7"/>
+<path class="ln-m" d="M98 66.5h9M98 70h9M98 73.5h6"/>
+<!-- verdicts land in the margin, checklist-style -->
+<g transform="translate(120,14)"><g class="ufeval-t1"><path class="ac-s" d="M-3.5 0l2.4 2.4L4.2-2.4"/></g></g>
+<g transform="translate(120,42)"><g class="ufeval-t2"><path class="ac-s" d="M-3.5 0l2.4 2.4L4.2-2.4"/></g></g>
+<g transform="translate(120,70)"><g class="ufeval-t3"><path class="ac-s" d="M-3.5 0l2.4 2.4L4.2-2.4"/></g></g>
+<text class="tiny" x="66" y="90" text-anchor="middle">one judge · any task · 112 aspects</text>
 </svg>
 {% when 'mui' %}
 <svg class="scene s-mui" viewBox="0 0 132 94" aria-hidden="true">
