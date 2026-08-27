@@ -8,7 +8,7 @@ main:
 
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
-    badge: Preprint
+    badge: EMNLP 2026 · Findings
     scene: skill
     story: 'An auditor sweeps the open-skill shelf — most pass, one gets flagged.'
     pdf: https://arxiv.org/abs/2605.23657

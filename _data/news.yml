@@ -1,4 +1,6 @@
 # 每条新闻一个条目；date 是显示用的短标签，text 支持 HTML
+- date: Aug 2026
+  text: Two papers were accepted to <strong>EMNLP 2026</strong>.
 - date: May 2026
   text: 'New preprint “<a href="https://arxiv.org/abs/2605.23657">OpenSkillEval</a>: Automatically Auditing the Open Skill Ecosystem for LLM Agents” is out.'
 - date: Feb 2026
