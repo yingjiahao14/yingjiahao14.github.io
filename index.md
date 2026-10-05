@@ -3,7 +3,7 @@ layout: homepage
 ---
 ## About Me
 
-I am a fourth-year Ph.D. candidate at Singapore Management University, supervised by [Yixin Cao](https://taominer.github.io/) and [Qianru Sun](https://faculty.smu.edu.sg/profile/sun-qianru-551). My research focuses on developing robust, fair, and effective methods for the automated evaluation and improvement of Large Language Models (LLMs).
+I am a postdoctoral research fellow at Fudan University, working with [Yixin Cao](https://taominer.github.io/). I received my Ph.D. from Singapore Management University, supervised by [Yixin Cao](https://taominer.github.io/) and [Qianru Sun](https://faculty.smu.edu.sg/profile/sun-qianru-551). My research focuses on developing generalizable, reliable, and effective methods for the evaluation and self-improvement of Large Language Model (LLM) systems.
 
 ## Research Interests
 
