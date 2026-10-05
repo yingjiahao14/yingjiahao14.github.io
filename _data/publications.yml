@@ -6,6 +6,14 @@
 #   image    缩略图路径 (assets/img/ 下)
 main:
 
+  - title: "Belief-Trajectory Energy: Measuring the Path to a Prediction"
+    authors: <strong>Jiahao Ying</strong>, Wei Tang, Boxian Ai, Yaoning Wang, Haotian Chen, Wenhe Sun, Caijun Xu, Haozhan Cai, Changyi Xiao, Yixin Cao
+    badge: Preprint
+    scene: bte
+    story: 'A belief climbs the layers; how much it is revised on the way up is the measurement.'
+    page: https://jhying.org/bte/
+    image: ./assets/img/bte.png
+
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
     badge: EMNLP 2026 · Findings
