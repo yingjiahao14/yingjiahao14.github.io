@@ -1,6 +1,6 @@
 # 每条新闻一个条目；date 是显示用的短标签，text 支持 HTML
 - date: Oct 2026
-  text: 'New preprint “<a href="https://jhying.org/bte/">Belief-Trajectory Energy</a>: Measuring the Path to a Prediction”, with an interactive project page.'
+  text: 'New preprint “<a href="https://arxiv.org/abs/2610.05114">Belief-Trajectory Energy</a>: Measuring the Path to a Prediction” is out, with an <a href="https://jhying.org/bte/">interactive project page</a>.'
 - date: Aug 2026
   text: Two papers were accepted to <strong>EMNLP 2026</strong>.
 - date: May 2026

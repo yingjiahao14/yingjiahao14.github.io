@@ -11,6 +11,7 @@ main:
     badge: Preprint
     scene: bte
     story: 'A belief climbs the layers; how much it is revised on the way up is the measurement.'
+    pdf: https://arxiv.org/abs/2610.05114
     page: https://jhying.org/bte/
     image: ./assets/img/bte.png
 
