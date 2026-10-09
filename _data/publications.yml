@@ -12,7 +12,7 @@ main:
     scene: bte
     story: 'A belief climbs the layers; how much it is revised on the way up is the measurement.'
     pdf: https://arxiv.org/abs/2610.05114
-    page: https://jhying.org/bte/
+    # page: https://jhying.org/bte/   (project page offline since 2026-10-09; restore this line to relink it)
     image: ./assets/img/bte.png
 
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
