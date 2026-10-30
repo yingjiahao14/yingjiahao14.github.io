@@ -61,6 +61,55 @@
 </g></g>
 <text class="tiny" x="66" y="91" text-anchor="middle">the belief's path to its prediction</text>
 </svg>
+{% when 'sae' %}
+<svg class="scene s-sae" viewBox="0 0 132 94" aria-hidden="true">
+<!-- the indicator model with its sparse autoencoder -->
+<g transform="translate(3,26)"><g class="bot">
+  <path class="ln" d="M13 4.5v3"/><circle class="ac" cx="13" cy="3" r="1.6"/>
+  <rect class="ln fillbg" x="3" y="7.5" width="20" height="16" rx="5.5"/>
+  <circle class="eye" cx="9.5" cy="14.5" r="1.4" fill="currentColor"/><circle class="eye" cx="16.5" cy="14.5" r="1.4" fill="currentColor"/>
+  <path class="ln" d="M10 19q3 1.8 6 0"/>
+</g></g>
+<!-- three benchmarks, read one after another -->
+<g transform="translate(38,4)"><rect class="ln-m fillsurf sae-cA" x="0" y="0" width="22" height="16" rx="3"/><path class="ln-m" d="M4 5h14M4 8.5h14M4 12h9"/><text class="tiny" x="11" y="22" text-anchor="middle">benchmark A</text></g>
+<g transform="translate(38,31)"><rect class="ln-m fillsurf sae-cB" x="0" y="0" width="22" height="16" rx="3"/><path class="ln-m" d="M4 5h14M4 8.5h14M4 12h9"/><text class="tiny" x="11" y="22" text-anchor="middle">benchmark B</text></g>
+<g transform="translate(38,58)"><rect class="ln-m fillsurf sae-cC" x="0" y="0" width="22" height="16" rx="3"/><path class="ln-m" d="M4 5h14M4 8.5h14M4 12h9"/><text class="tiny" x="11" y="22" text-anchor="middle">benchmark C</text></g>
+<!-- the feature footprint each one leaves -->
+<rect class="ln-m" x="72" y="12" width="48" height="30" rx="3"/>
+<circle class="fdot" cx="78" cy="18" r="1.7"/>
+<g transform="translate(78,18)"><g class="sae-a"><circle class="ac" r="2.6"/></g></g>
+<g transform="translate(78,18)"><g class="sae-b"><circle class="ac-s" r="4.2"/></g></g>
+<circle class="fdot" cx="87" cy="18" r="1.7"/>
+<g transform="translate(87,18)"><g class="sae-a"><circle class="ac" r="2.6"/></g></g>
+<g transform="translate(87,18)"><g class="sae-b"><circle class="ac-s" r="4.2"/></g></g>
+<circle class="fdot" cx="96" cy="18" r="1.7"/>
+<circle class="fdot" cx="105" cy="18" r="1.7"/>
+<g transform="translate(105,18)"><g class="sae-c"><circle r="2.6" fill="currentColor"/></g></g>
+<circle class="fdot" cx="114" cy="18" r="1.7"/>
+<g transform="translate(114,18)"><g class="sae-c"><circle r="2.6" fill="currentColor"/></g></g>
+<circle class="fdot" cx="78" cy="27" r="1.7"/>
+<circle class="fdot" cx="87" cy="27" r="1.7"/>
+<g transform="translate(87,27)"><g class="sae-a"><circle class="ac" r="2.6"/></g></g>
+<g transform="translate(87,27)"><g class="sae-b"><circle class="ac-s" r="4.2"/></g></g>
+<circle class="fdot" cx="96" cy="27" r="1.7"/>
+<g transform="translate(96,27)"><g class="sae-a"><circle class="ac" r="2.6"/></g></g>
+<g transform="translate(96,27)"><g class="sae-b"><circle class="ac-s" r="4.2"/></g></g>
+<circle class="fdot" cx="105" cy="27" r="1.7"/>
+<circle class="fdot" cx="114" cy="27" r="1.7"/>
+<g transform="translate(114,27)"><g class="sae-c"><circle r="2.6" fill="currentColor"/></g></g>
+<circle class="fdot" cx="78" cy="36" r="1.7"/>
+<circle class="fdot" cx="87" cy="36" r="1.7"/>
+<circle class="fdot" cx="96" cy="36" r="1.7"/>
+<g transform="translate(96,36)"><g class="sae-a"><circle class="ac" r="2.6"/></g></g>
+<g transform="translate(96,36)"><g class="sae-b"><circle class="ac-s" r="4.2"/></g></g>
+<circle class="fdot" cx="105" cy="36" r="1.7"/>
+<circle class="fdot" cx="114" cy="36" r="1.7"/>
+<g transform="translate(114,36)"><g class="sae-c"><circle r="2.6" fill="currentColor"/></g></g>
+<!-- verdicts -->
+<g transform="translate(99,52)"><g class="sae-tag1"><rect class="ac-s fillbg" x="-18" y="-5.5" width="36" height="11" rx="3"/><text class="sae-txt" x="0" y="2.4" text-anchor="middle">A ≈ B</text></g></g>
+<g transform="translate(99,66)"><g class="sae-tag2"><text class="tiny" x="0" y="0" text-anchor="middle">C adds new features</text></g></g>
+<text class="tiny" x="66" y="91" text-anchor="middle">same features, same measurement</text>
+</svg>
 {% when 'ufeval' %}
 <svg class="scene s-ufeval" viewBox="0 0 132 94" aria-hidden="true">
 <!-- the one unified judge -->

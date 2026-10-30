@@ -15,6 +15,14 @@ main:
     page: https://jhying.org/bte/
     image: ./assets/img/bte.png
 
+  - title: "Do Benchmarks Measure the Same Thing? Evaluation-Free Benchmark Redundancy Analysis with SAE"
+    authors: Yaoning Wang, <strong>Jiahao Ying</strong>, Yubo Ma, Yu Wan, Dayiheng Liu, Yixin Cao, Yu-Gang Jiang
+    badge: EMNLP 2026 · Main · Outstanding Paper
+    scene: sae
+    story: 'Three benchmarks, one sparse autoencoder — two of them light up the very same features.'
+    pdf: https://aclanthology.org/2026.emnlp-main.1284/
+    image: ./assets/img/sae.png
+
   - title: "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents"
     authors: <strong>Jiahao Ying</strong>, Boxian Ai, Wei Tang, Siyuan Liu, Yixin Cao
     badge: EMNLP 2026 · Findings
